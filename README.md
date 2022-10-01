@@ -56,3 +56,38 @@ You can reduce your Amazon EC2 costs by making a commitment to a consistent amou
 You can reduce your Amazon EC2 costs by making a commitment to a specific instance configuration, including instance type and Region, for a term of 1 or 3 years.
 - Spot Instances
 Request unused EC2 instances, which can reduce your Amazon EC2 costs significantly.
+
+# What is Linux
+- Linux is an open source operating system in which a majority of the cloud and current devops tools have been developed on
+
+## Why is Linux important in DevOps
+- It has native integrations to a lot of devops tooling and allows us more control over the operating system.
+
+### Distros
+- What is a distro -> linux flavor
+- What are the differences - package managers
+- Main distros include debian and redhat
+
+### commands
+- switch to root --> ```sudo su```
+- change directory --> ```cd```
+- show current directory --> ```pwd```
+- list current files in directory --> ```ls``` or ```ls -al```
+- how to create empty files --> ```touch filename.txt```
+- how to show contents of the file --> ```cat filename.txt``` 
+- how to delete files --> ```rm -rf filename.txt```
+- how to copy and move files --> ```cp filename.txt filename2.txt``` and ```mv filename.txt folder1/``` 
+- how to create directories and remove them --> ```mkdir folder2``` and ```rmdir folder2``` , if the folder has files in it use ```rm -rf folder2/```
+- update packages --> ```sudo yum update -y```
+- install packages ```sudo yum install example -y```
+- filter for words in large terminal output --> ```example command | grep -i wordyou'relookingfor```
+- make a file executible --> ```chmod +x```
+- run a script --> ```sudo ./example.sh```
+
+### vim editor
+- edit a file --> ```vi filename.txt```
+- type i in your keyboard to enter insert mode
+- type contents into file
+- type ^c (control c) or escape when done
+- type ```:x``` to save 
+- type ```:q!``` to not save
