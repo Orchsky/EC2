@@ -91,3 +91,22 @@ Request unused EC2 instances, which can reduce your Amazon EC2 costs significant
 - type ^c (control c) or escape when done
 - type ```:x``` to save 
 - type ```:q!``` to not save
+
+## ASG
+- An Auto Scaling group is a collection of EC2 instances that are treated as a logical grouping for the purposes of automatic scaling. Features such as health check replacements and scaling policies. Use cases for ASG --> maintaining the number of instances.
+
+## Load balancer
+- A load balancer serves as the single point of contact for clients. The load balancer distributes incoming application traffic across multiple targets, such as EC2 instances, in multiple Availability Zones. This increases the availability of your application.
+
+## Difference between the two
+- What is the difference between load balancer and auto scaling group?
+Auto Scaling is used for automatic scaling up and scaling down. Loadbalancer used to distribute the incoming traffic across multiple targets.
+- why do we need load balancing: scales to demand of system
+- 3 different types of LB: Classic, App, Network. (Classic LB is outdated so we do not need to learn it)
+- ASG: adjusts capacity to how instances scale (pair with elastic load balancer)
+- App LB --> HTTP HTTPS
+- Network --> Non http / https
+- ALB — Layer 7 (HTTP/HTTPS traffic), Flexible.
+- NLB — Layer 4 (TLS/TCP/UDP traffic), Static IP
+- ALB This is the distribution of requests based on multiple variables, from the network layer to the application layer. 
+- This is the distribution of traffic based on network variables, such as IP address and destination ports. It is layer 4 (TCP) and below and is not designed to take into consideration anything at the application layer such as content type, cookie data, custom headers, user location, or the application behavior. It is context-less, caring only about the network-layer information contained within the packets it is directing this way and that.
