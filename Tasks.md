@@ -19,7 +19,7 @@
 
 - This is where the web application code is located [Repo](https://github.com/zce/html5up)
 
-- Figure out how to host the [arcana] (https://github.com/zce/html5up/tree/master/arcana) web application onto the virtual machines
+- Figure out how to host the [Arcana](https://github.com/zce/html5up/tree/master/arcana) web application onto the virtual machines
 
 - Demo your solution by showing your setup and live web app running on the virtual machines.
 
