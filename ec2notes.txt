@@ -1,0 +1,54 @@
+10/06/2022 Thursday 
+
+1. How to connect Windows instance?
+    1.1 SSH 22 for Linux instances 
+    1.2 Windows requires RDP (Remote Desktop Protocol) default port 3389
+
+2. Create custom AMI (Amazon machine image) 
+    2.1 Shift left --> Security as a priority 
+    2.2 Organziation level companies use Hardened/Private AMI/Images 
+    2.3 Hardened - encrypted (Encryption at Rest)
+    2.4 What is AMI --> Preconfigured Software 
+    2.5 Before building custom AMI from running instnace some security practices must be observed
+        2.6. Sensitive data must be removed 
+        2.7 cd .ssh and sudo shred authorized_keys and  rm -Rf authorized_keys 
+        2.8 cd .aws and sudo shred credentials and rm -Rf credentials
+        2.9 history , history -c --> current history, history -w --> entire history 
+        2.10 Delete on termination is True --> Once instance volume gets deleted as well 
+
+3. Scaling 
+    3.1 Scalibility describes a system's elasticity. System's ability to grow, scale up, down or out. 
+    3.2 2 types of Scaling
+    3.3 Horizontal --> (aka scaling out) refers adding additional nodes or machines to your infrastructure
+    to cope with new demands. If you are hosting an application on a server and find that it no longer has the 
+    capacity or capabalities to handle traffic, adding additional EC2 maybe your solution
+    3.4 Vertical --> (aka scaling up) describes adding additional resources to a system so that it meets demand. 
+
+4. Advantages of Horizontal Scaling 
+    4.1 Scaling is easier from hardware perspective --> Just add extra EC2s 
+    4.2 Fewer periods of downtime 
+    4.3 Increased resilience and fault tolerence 
+    4.4 Increased performance 
+
+5. Disadvantages of Horizontal scaling
+    5.1 Increased complexity of maintenance and operation 
+    5.2 Increased initial cost 
+
+
+6. Advantages of Vertical scaling 
+    6.1 Cost-effective 
+    6.2 Less complex process communication 
+    6.3 Less complicated maintenance
+    6.4 less need for software changes 
+
+7. Disadvantages of Vertical scaling
+    7.1 Higher possibility of downtime --> EC2/VMs are immutable. For certain operations VM must be stopped 
+    7.2 Single point of failure 
+    7.3 Upgrade Limitations --> Each machine has its threshold for RAM, Storage and processing power. 
+
+8. Interview. How do you collect the logs from Load Balancer? 
+ Answer: LB Access Logs. Log destination is S3 bucket. After dumping all LB 
+ access logs into S3 you can use Kibana, Splunk, Datadog, Grafana to analyze 
+ and query the data. 
+9. In case Access Logs is disabled what will be your solution? Python is a rescue. 
+
