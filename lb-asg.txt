@@ -1,0 +1,35 @@
+10/13/2022 Thursday
+
+LB - ASG 
+
+1. Why do we need a load balancer? LB are are used to increase capacity (concurrent users) and reliability 
+of applications. LB lets you evenly distribute network traffic to prevent failure cause by overloading a 
+particular resource. 
+2. #!/bin/bash
+    yum update -y
+    yum install httpd -y
+    cd /var/www/html
+    touch index.html
+    echo "Welcome to Orchsky" > /var/www/html/index.html
+    service httpd start 
+    chkconfig httpd on  --> chkconfig --> Run the app during the boot (restart) time 
+3. epel --> extra packages enterprise linux 
+
+Run stress test to validate that auto scaling working properly 
+4. sudo amazon-linux-extras install epel -y 
+5. sudo yum install -y stress
+6. stress --cpu 2 --timeout 300
+
+Network load balancer. 
+
+1. Intended to handle millions of request per second or spike of traffic. 
+2. Works great when there is unpredictable load 
+
+Load test 
+
+while true;
+do 
+wget <nlb dns name>
+done 
+
+make sure hit control+c to stop the test 
